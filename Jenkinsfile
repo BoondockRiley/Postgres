@@ -2,9 +2,19 @@ pipeline {
   agent any
   stages {
     stage('Git') {
-      steps {
-        echo 'Start'
-        git(url: 'https://github.com/BoondockRiley/Postgres', branch: 'main', credentialsId: 'github-token2')
+      parallel {
+        stage('Git') {
+          steps {
+            echo 'Start'
+          }
+        }
+
+        stage('') {
+          steps {
+            echo 'LB - Flow'
+          }
+        }
+
       }
     }
 
