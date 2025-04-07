@@ -12,10 +12,10 @@ pipeline {
         stage('Flow') {
           steps {
             echo 'LB - Flow'
-            sh './runme.sh'
             sh 'liquibase flow'
           }
         }
+
       }
     }
 
@@ -24,5 +24,6 @@ pipeline {
         echo 'End'
       }
     }
+
   }
 }
