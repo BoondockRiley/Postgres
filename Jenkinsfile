@@ -12,6 +12,7 @@ pipeline {
         stage('Flow') {
           steps {
             echo 'LB - Flow'
+            sh 'echo $PATH'
             sh 'liquibase flow'
           }
         }
