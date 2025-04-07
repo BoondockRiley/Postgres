@@ -12,11 +12,10 @@ pipeline {
         stage('Flow') {
           steps {
             echo 'LB - Flow'
-            bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "./runme.sh"'
-            bat '"C:\\Program Files\\Git\\bin\\bash.exe" -c "liquibase flow"'
+            sh './runme.sh'
+            sh 'liquibase flow'
           }
         }
-
       }
     }
 
@@ -25,6 +24,5 @@ pipeline {
         echo 'End'
       }
     }
-
   }
 }
