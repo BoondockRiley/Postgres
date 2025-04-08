@@ -12,8 +12,10 @@ pipeline {
         stage('Flow') {
           steps {
             echo 'LB - Flow'
-            export PATH=/opt/homebrew/bin:$PATH
-            liquibase flow
+            sh '''
+              export PATH=/opt/homebrew/bin:$PATH
+              liquibase flow
+            '''
           }
         }
 
