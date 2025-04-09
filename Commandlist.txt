@@ -1,0 +1,12 @@
+##rollback SQL Generation
+liquibase rollbackOneChangeSetSql \
+  --changeLogFile=example-changelog.xml \
+  --changeSetId=3 \
+  --changeSetAuthor=Ben.riley \
+  --changeset-path=example-changelog.xml \
+  --url=jdbc:postgresql://localhost:5433/postgres \
+  --username=postgres \
+  --password=secret \
+  --report-enabled=false
+
+
